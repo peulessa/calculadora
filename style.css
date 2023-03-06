@@ -173,14 +173,6 @@
     
 }
 
-.botao-reset{
-    grid-area: reset;
-}
-
-.botao-result{
-    grid-area: result;
-}
-
 .botao-reset, .botao-result, .botao-nmr{
     background-color: var(--key-bg-color-1);
     border: none;
@@ -203,4 +195,37 @@
     background-color: var(--key-result-bg-color-1);
     color: var(--screen-text-color-1);
     box-shadow: 0 4px var(--key-result-shadow-color-1);
+    grid-area: result;
+}
+
+.botao-reset{
+    grid-area: reset;
+}
+
+/*************** DEKTOP ***************/
+
+@media screen and (min-width:1440px){
+    body{
+        background-color: var(--bg-color-1);
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-principal{
+        width: 25%;
+        margin-top: 5em;
+    }
+
+    .container-tela{
+        max-width: 100%;
+    }
+
+    .container-teclas{
+        grid-gap: 1.5em;
+    }
+
+    .botao-reset:hover, .botao-result:hover, .botao-nmr:hover{
+        cursor: pointer;
+    }
+    
 }
