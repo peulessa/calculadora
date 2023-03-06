@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+:root{
+    /**************** TEMA 1 ***************/
+    
+    /* Backgrounds */
+    --bg-color-1: hsl(222, 26%, 31%);
+    --toggle-bg-color-1: hsl(223, 31%, 20%);
+    --screen-color-1: hsl(224, 36%, 15%);
+
+    /* Teclas */
+    --key-del-bg-color-1: hsl(225, 21%, 49%);
+    --key-del-shadow-color-1: hsl(224, 28%, 35%);
+
+    --key-result-bg-color-1: hsl(6, 63%, 50%);
+    --key-result-shadow-color-1: hsl(6, 70%, 34%);
+
+    --key-bg-color-1: hsl(30, 25%, 89%);
+    --key-shadow-color-1: hsl(28, 16%, 65%);
+
+    /* Texto */
+
+    --key-text-color-1: hsl(221, 14%, 31%);
+    --screen-text-color-1: hsl(0, 0%, 100%);
+
+
+    /**************** TEMA 2 ***************/
+
+    /* Backgrounds */
+    --bg-color-2: hsl(0, 0%, 90%);
+    --toggle-bg-color-2: hsl(0, 5%, 81%);
+    --screen-color-2: hsl(0, 0%, 93%);
+
+    /* Teclas */
+    --key-del-bg-color-2: hsl(185, 42%, 37%);
+    --key-del-shadow-color-2: hsl(185, 58%, 25%);
+
+    --key-result-bg-color-2: hsl(25, 98%, 40%);
+    --key-result-shadow-color-2: hsl(25, 99%, 27%);
+
+    --key-bg-color-2: hsl(45, 7%, 89%);
+    --key-shadow-color-2: hsl(35, 11%, 61%);
+
+    /* Texto */
+
+    --key-text-color-2: hsl(60, 10%, 19%);
+    --screen-text-color-2: hsl(0, 0%, 100%);
+
+
+    /**************** TEMA 3 ***************/
+
+    /* Backgrounds */
+    --bg-color-3: hsl(268, 75%, 9%);
+    --toggle-bg-color-3: hsl(268, 71%, 12%);
+    --screen-color-3: hsl(268, 71%, 12%);
+
+    /* Teclas */
+    --key-del-bg-color-3: hsl(281, 89%, 26%);
+    --key-del-shadow-color-3: hsl(285, 91%, 52%);
+
+    --key-result-bg-color-3: hsl(176, 100%, 44%);
+    --key-result-shadow-color-3: hsl(177, 92%, 70%);
+
+    --key-bg-color-3: hsl(268, 47%, 21%);
+    --key-shadow-color-3: hsl(290, 70%, 36%);
+
+    /* Texto */
+
+    --key-text-color-3: hsl(52, 100%, 62%);
+    --screen-text-color-3: hsl(198, 20%, 13%);
+    --key-del-text-color-3: hsl(0, 0%, 100%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*************** CORPO PRINCIPAL ***************/
+.container-principal{
+    background-color: var(--bg-color-1);
+    padding: 2em;
+    font-family: 'Overpass', sans-serif;
+}
+
+/*************** CABEÇALHO ***************/
+.container-cabecalho{
+    display: flex;
+    justify-content: space-between;
+    color: var(--screen-text-color-1);
+}
+
+/* Tema */
+.container-tema{
+    display: flex;
+    column-gap: 1.5em;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 700;
+
+}
+
+.container-tema>p{
+    padding-top: 1.5em;
+}
+
+/* Contador */
+.tema-contador{
+    display: flex;
+    column-gap: 1.1em;
+    padding-left: 0.3em;
+}
+
+/* Toggle */
+.tri-state-toggle{
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--toggle-bg-color-1);
+    padding: 0.2em;
+}
+
+.button{
+    height: 15px;
+    width: 19px;
+    appearance: none;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+#one{
+    opacity: 1;
+}
+
+/*************** TELA ***************/
+
+.container-tela{
+    background-color: var(--screen-color-1);
+    color: var(--screen-text-color-1);
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.7em;
+    margin: 1em 0;
+    max-width: 90%;
+    text-align: end;
+    border-radius: 0.5em;
+
+}
+
+/*************** TECLAS ***************/
+
+.container-teclas{
+    display: grid;
+    grid-template-areas: 
+        "nmr nmr nmr func"
+        "nmr nmr nmr func"
+        "nmr nmr nmr func"
+        "nmr nmr nmr func"
+        "reset reset result result";
+    grid-gap: 1em;
+    background-color: var(--toggle-bg-color-1);
+    padding: 1.5em;
+    border-radius: 10px;
+    
+}
+
+.botao-reset{
+    grid-area: reset;
+}
+
+.botao-result{
+    grid-area: result;
+}
+
+.botao-reset, .botao-result, .botao-nmr{
+    background-color: var(--key-bg-color-1);
+    border: none;
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 0.7em;
+    border-radius: 10px;
+    box-shadow: 0 4px var(--key-shadow-color-1);
+    
+}
+
+.botao-del, .botao-reset{
+    background-color: var(--key-del-bg-color-1);
+    color: var(--screen-text-color-1);
+    font-size: 1em;
+    box-shadow: 0 4px var(--key-del-shadow-color-1);
+}
+
+.botao-result{
+    background-color: var(--key-result-bg-color-1);
+    color: var(--screen-text-color-1);
+    box-shadow: 0 4px var(--key-result-shadow-color-1);
+}
