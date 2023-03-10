@@ -47,7 +47,7 @@
     /* Texto */
 
     --key-text-color-2: hsl(60, 10%, 19%);
-    --screen-text-color-2: hsl(0, 0%, 100%);
+    --screen-text-color-2: hsl(0, 2%, 10%);
 
 
     /**************** TEMA 3 ***************/
@@ -70,7 +70,7 @@
     /* Texto */
 
     --key-text-color-3: hsl(52, 100%, 62%);
-    --screen-text-color-3: hsl(198, 20%, 13%);
+    --screen-text-color-3: hsl(52, 100%, 62%);
     --key-del-text-color-3: hsl(0, 0%, 100%);
 
 }
@@ -81,6 +81,7 @@
 }
 
 /*************** CORPO PRINCIPAL ***************/
+
 .container-principal{
     background-color: var(--bg-color-1);
     padding: 2em;
@@ -88,6 +89,7 @@
 }
 
 /*************** CABEÇALHO ***************/
+
 .container-cabecalho{
     display: flex;
     justify-content: space-between;
@@ -174,7 +176,6 @@
 }
 
 .botao-reset, .botao-result, .botao-nmr{
-    background-color: var(--key-bg-color-1);
     border: none;
     font-size: 1.5em;
     font-weight: 900;
@@ -202,7 +203,103 @@
     grid-area: reset;
 }
 
-/*************** DEKTOP ***************/
+/*************** TEMA 2 ***************/
+
+/* BODY */
+.body2{
+    background-color: var(--bg-color-2);
+}
+
+/* CORPO PRINCIPAL */
+.container-principal2{
+    background-color: var(--bg-color-2);
+}
+
+/*CABEÇALHO */
+.container-cabecalho2{
+    color: var(--screen-text-color-2);
+}
+
+/* Toggle */
+.tri-state-toggle2{
+    background-color: var(--toggle-bg-color-2);
+}
+
+.button2{
+    background-color: var(--key-result-bg-color-2);
+}
+
+/* TELA */
+.container-tela2{
+    background-color: var(--screen-color-2);
+    color: var(--screen-text-color-2);
+}
+
+/* TECLAS */
+.container-teclas2{
+    background-color: var(--toggle-bg-color-2);
+}
+
+.botao-del, .botao-reset2{
+    background-color: var(--key-del-bg-color-2);
+    box-shadow: 0 4px var(--key-del-shadow-color-2);
+}
+
+.botao-result2{
+    background-color: var(--key-result-bg-color-2);
+    color: var(--bg-color-2);
+    box-shadow: 0 4px var(--key-result-shadow-color-2);
+}
+
+/*************** TEMA 3 ***************/
+
+/* BODY */
+.body3{
+    background-color: var(--bg-color-3);
+}
+
+/* CORPO PRINCIPAL */
+.container-principal3{
+    background-color: var(--bg-color-3);
+}
+
+/*CABEÇALHO */
+.container-cabecalho3{
+    color: var(--screen-text-color-3);
+}
+
+/* Toggle */
+.tri-state-toggle3{
+    background-color: var(--toggle-bg-color-3);
+}
+
+.button3{
+    background-color: var(--key-result-bg-color-3);
+}
+
+/* TELA */
+.container-tela3{
+    background-color: var(--screen-color-3);
+    color: var(--screen-text-color-3);
+}
+
+/* TECLAS */
+.container-teclas3{
+    background-color: var(--toggle-bg-color-3);
+}
+
+.botao-del3, .botao-reset3{
+    background-color: var(--key-del-bg-color-3);
+    box-shadow: 0 4px var(--key-del-shadow-color-3);
+}
+
+.botao-result3{
+    background-color: var(--key-result-bg-color-3);
+    color: var(--bg-color-3);
+    box-shadow: 0 4px var(--key-result-shadow-color-3);
+}
+
+/* DEKTOP */
 
 @media screen and (min-width:1440px){
     body{
